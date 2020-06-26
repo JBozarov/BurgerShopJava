@@ -17,14 +17,25 @@ public class HealthyBurger extends PlainBurger{
     }
 
     @Override
+    public double getPrice() {
+        return super.getPrice();
+    }
+
+    @Override
     public ArrayList<Topping> getToppings() {
         return super.getToppings();
     }
 
+    // can add upto 4 toppings only
     @Override
     public void addTopping(Topping topping) {
-        this.toppings.add(topping);
-        System.out.println("You added " + topping.getName() + " to your " + getName() + " burger and your price is increased by " + topping.getPrice());
+        if ( this.toppings.size() >= 4) {
+            System.out.println("Cannot add more than 2 toppings to your "+this.getName());
+        }
+        else {
+            this.toppings.add(topping);
+            System.out.println("You added " + topping.getName() + " to your " + getName() + " burger and your price is increased by " + topping.getPrice());
+        }
     }
 
     @Override

@@ -22,6 +22,11 @@ public class PlainBurger {
     public String getName() {
         return name;
     }
+
+    public double getPrice() {
+        return price;
+    }
+
     public ArrayList<Topping> getToppings() {
         return toppings;
     }
