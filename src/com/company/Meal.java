@@ -4,8 +4,6 @@ public class Meal {
     // fields
     private String name;
     private PlainBurger burger;
-    private HealthyBurger healthyBurger;
-    private DeluxeBurger deluxeBurger;
     private Drink drink;
     private Side side;
     private double price;

@@ -5,21 +5,21 @@ public class Main {
     public static void main(String[] args) {
 
         //  Bread types
-        Bread ciabatta = new Bread("Ciabatta Roll", 2.99);
-        Bread kaiser = new Bread("Kaiser Roll", 3.99);
-        Bread georgian = new Bread("Potato Roll", 4.99);
-        Bread italian = new Bread("Italian Roll", 5.99);
+        Bread ciabatta = new Bread("Ciabatta Roll", 1.99);
+        Bread kaiser = new Bread("Kaiser Roll", 2.99);
+        Bread georgian = new Bread("Potato Roll", 3.99);
+        Bread italian = new Bread("Italian Roll", 4.99);
 
 
         // Meat types
-        Meat brisket = new Meat("Brisket", 2);
-        Meat dryAged = new Meat("Dry Aged", 3);
-        Meat grass = new Meat("Grass", 4);
-        Meat wagyu = new Meat("Wagyu", 5);
+        Meat brisket = new Meat("Brisket", 1.00);
+        Meat dryAged = new Meat("Dry Aged", 1.50);
+        Meat grass = new Meat("Grass", 2.00);
+        Meat wagyu = new Meat("Wagyu", 2.50);
 
 
         // Toppings
-        Topping avacado = new Topping("Avacado", 5.35);
+        Topping avacado = new Topping("Avacado", 1.35);
         Topping lettuce = new Topping("Lettuce", 1.26);
         Topping bacon = new Topping("Bacon", 2.15);
         Topping egg = new Topping("Fried egg", 2.36);
@@ -83,5 +83,24 @@ public class Main {
         // Deluxe meal includes Deluxe burger, moundew and icecream
         Meal deluxeMeal = new Meal("Deluxe Meal", deluxeBurger, moundew, icecream);
         deluxeMeal.getMealInfo();
+
+        // Orders
+        // Plain order
+        Order basicOrder = new Order("Bacis order", plainBurger, ciabatta, brisket);
+        basicOrder.addTopping(6);
+        basicOrder.getOrderInfo();
+
+        // adding toppings:
+        basicOrder.addTopping(3);
+
+        // adding sides:
+        basicOrder.addSides(3);
+        basicOrder.getOrderInfo();
+
+        // Deluxe order:
+        Order deluxeOrder = new Order("Deluxe order", deluxeBurger, italian, wagyu);
+        deluxeOrder.getOrderInfo();
+        deluxeOrder.addTopping(6);
+        deluxeOrder.getOrderInfo();
     }
 }

@@ -52,9 +52,10 @@ public class PlainBurger {
     }
 
     // getting burger info
-    public void getBurgerInfo() {
+    public double getBurgerInfo() {
         this.price  = this.bread.getPrice() + this.meat.getPrice() + generateToppinsPrice(this.toppings);
         System.out.println("Your burger is " + this.name + " and its price is " + this.price);
+        return this.price;
     }
 }
 

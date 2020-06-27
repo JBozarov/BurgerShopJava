@@ -37,7 +37,8 @@ public class DeluxeBurger extends PlainBurger{
     }
 
     @Override
-    public void getBurgerInfo() {
+    public double getBurgerInfo() {
         super.getBurgerInfo();
+        return this.getPrice();
     }
 }
